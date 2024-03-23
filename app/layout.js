@@ -1,22 +1,22 @@
-import { Inter } from 'next/font/google'
-import Header from '@/components/Header'
-import { getDocuments } from '@/lib/doc'
-import './globals.css'
+import { Inter } from "next/font/google";
+import Header from "@/components/Header";
+import { getDocuments } from "@/lib/doc";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Docucraft',
-  description: 'A documentation website by Protocol',
-}
+  title: "Docucraft",
+  description: "A documentation website by Protocol",
+};
 
 export default function RootLayout({ children }) {
-  const allDocuments = getDocuments()
+  const allDocuments = getDocuments();
   // console.log(allDocuments)
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div class="h-full lg:ml-72 xl:ml-80">
+        <div className="h-full lg:ml-72 xl:ml-80">
           <Header docs={allDocuments} />
           <div className="relative px-4 pt-14 sm:px-6 lg:px-8">
             <main className="flex-auto py-16">
@@ -31,5 +31,5 @@ export default function RootLayout({ children }) {
         </div>
       </body>
     </html>
-  )
+  );
 }

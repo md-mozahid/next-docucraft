@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Landing() {
   return (
@@ -20,8 +20,9 @@ export default function Landing() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
-                  href="/docs/introduction"
-                  className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700">
+                  href="/documents/introduction"
+                  className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
+                >
                   <span>Get Started</span>
                 </Link>
               </div>
@@ -39,5 +40,5 @@ export default function Landing() {
         </div>
       </div>
     </article>
-  )
+  );
 }
